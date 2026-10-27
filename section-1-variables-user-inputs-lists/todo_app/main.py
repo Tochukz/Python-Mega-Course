@@ -1,8 +1,17 @@
-user_prompt = "Enter a todo: "
-todo = input(user_prompt)
-print(todo)
-todos = [ todo ]
-length = len(todo)
-print("The length of the todo: ", length)
-print(f"You have {len(todos)} todos", )
-print(type(todos))
+todos = []
+while True:
+    user_action = input("Type add, show or exit: ")
+    user_action = user_action.lower().strip()
+    match user_action:
+        case "add":
+            todo = input("Enter todo: ")
+            todos.append(todo)
+        case "show" | "display":
+            for todo in todos:
+                print(todo)
+        case "exit":
+            break
+        case _:
+            print("Invalid input")
+
+print("Bye!")
