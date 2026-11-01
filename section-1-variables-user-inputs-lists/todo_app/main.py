@@ -1,15 +1,28 @@
-todos = []
+file = open("todos.txt", "r")
+todos = file.readlines()
+file.close()
+
 while True:
-    user_action = input("Type add, show or exit: ")
+    user_action = input("Type add, show, edit, complete or exit: ")
     user_action = user_action.lower().strip()
     match user_action:
         case "add":
-            todo = input("Enter todo: ")
+            todo = input("Enter todo: ") + "\n"
             todos.append(todo)
         case "show" | "display":
-            for todo in todos:
-                print(todo)
+            for i, todo in enumerate(todos):
+                print(f"{i+1}) {todo}")
+        case "edit":
+            number = input("Enter todo number to edit: ")
+            todo = input("Enter update: ") + "\n"
+            todos[int(number) - 1] = todo
+        case "complete":
+            number = input("Enter todo number to complete: ")
+            todos.pop(int(number) - 1)
         case "exit":
+            file = open("todos.txt", "w")
+            file.writelines(todos)
+            file.close()
             break
         case _:
             print("Invalid input")
