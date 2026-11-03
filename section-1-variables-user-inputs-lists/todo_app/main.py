@@ -11,7 +11,7 @@ while True:
             todos.append(todo)
         case "show" | "display":
             for i, todo in enumerate(todos):
-                print(f"{i+1}) {todo}")
+                print(f"{i+1}) {todo.strip('\n')}")
         case "edit":
             number = input("Enter todo number to edit: ")
             todo = input("Enter update: ") + "\n"
