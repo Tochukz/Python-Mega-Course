@@ -18,7 +18,10 @@ while True:
             todos[int(number) - 1] = todo
         case "complete":
             number = input("Enter todo number to complete: ")
-            todos.pop(int(number) - 1)
+            index = int(number) - 1
+            todo = todos[index].strip('\n')
+            todos.pop(index)
+            print(f"'{todo}' has been removed from todo list!")
         case "exit":
             file = open("todos.txt", "w")
             file.writelines(todos)
