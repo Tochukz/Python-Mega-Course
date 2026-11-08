@@ -1,3 +1,4 @@
+# Check if password match
 password = 'simple-password'
 password_input = ''
 while password != password_input:
