@@ -1,6 +1,11 @@
-file = open("todos.txt", "r")
-todos = file.readlines()
-file.close()
+# from helpers import get_todos, print_help
+import helpers
+from utils import console_util
+
+console_util.welcome()
+
+# todos = get_todos()
+todos = helpers.get_todos()
 
 while True:
     user_action = input("Type add, show, edit, complete, help or exit: ")
@@ -38,12 +43,8 @@ while True:
             file.writelines(todos)
         break
     elif user_action.startswith("help"):
-      print("Example commands: ")
-      print("  To add a new todo item: add Learning Python")
-      print("  To show all todos item: show")
-      print("  To edit todo item no1: edit 1")
-      print("  To mark todo item no2 as completed: complete 2")
-      print("  To end the program: exit")
+        # print_help()
+        helpers.print_help()
     else:
         print("Invalid input!")
 
