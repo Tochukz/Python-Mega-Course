@@ -1,0 +1,17 @@
+[
+    {
+        "question": "Which of these is NOT a type of AWS API Gateway",
+        "options": ["REST API", "HTTP API", "Gateway API"],
+        "answer": 2
+    },
+    {
+        "question": "Which one of these is not a type of AWS SQS Queue",
+        "options": ["Basic Queue", "Fifo Queue", "Standaard Queue"],
+        "answer": 0
+    },
+    {
+        "question": "What is the maximum size of an SQS Queue message",
+        "options": ["4MB", "1MB", "5MB"],
+        "answer": 1
+    }
+]

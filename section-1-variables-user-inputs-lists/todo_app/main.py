@@ -2,11 +2,10 @@
 import helpers
 from utils import console_util
 
-console_util.welcome()
-
 # todos = get_todos()
 todos = helpers.get_todos()
 
+console_util.welcome()
 while True:
     user_action = input("Type add, show, edit, complete, help or exit: ")
     user_action = user_action.strip()

@@ -2,3 +2,6 @@
 .idea
 **/outputs/*.txt
 **/journal/*.txt
+__pycache__/
+*.py[cod]
+*.zip
